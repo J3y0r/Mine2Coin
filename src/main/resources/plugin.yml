@@ -1,0 +1,11 @@
+name: Mine2Coin
+description: $description
+prefix: "[Mine2Coin LogManager]"
+version: '${version}'
+
+main: me.jeyor.mine2coin.Mine2CoinPlugin
+api-version: '1.21.11'
+depend: [ Vault ]
+
+authors: [ J3y0r ]
+website: https://github.com/J3y0r
