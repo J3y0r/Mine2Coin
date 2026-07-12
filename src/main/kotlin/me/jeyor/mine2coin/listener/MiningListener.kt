@@ -15,6 +15,7 @@ class MiningListener(
     @EventHandler
     fun onBlockBreak(event: BlockBreakEvent) {
         val reward = rewards.rewardFor(event.block.type) ?: return
+        event.isDropItems = false
 
         economy.deposit(event.player, reward)
         event.player.playSound(event.player.location, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f)
