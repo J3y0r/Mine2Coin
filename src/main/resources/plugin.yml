@@ -9,3 +9,14 @@ depend: [ Vault ]
 
 authors: [ J3y0r ]
 website: https://github.com/J3y0r
+
+commands:
+  mine2coin:
+    description: Reload Mine2Coin configuration.
+    usage: "/mine2coin reload"
+    permission: mine2coin.reload
+
+permissions:
+  mine2coin.reload:
+    description: Allows reloading the Mine2Coin configuration.
+    default: op

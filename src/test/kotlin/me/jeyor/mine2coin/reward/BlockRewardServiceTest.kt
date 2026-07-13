@@ -20,4 +20,14 @@ class BlockRewardServiceTest {
 
         assertNull(service.rewardFor(Material.DIAMOND_ORE))
     }
+
+    @Test
+    fun `reload replaces configured rewards`() {
+        val service = BlockRewardService(mapOf(Material.COAL_ORE to 1.0))
+
+        service.reload(mapOf(Material.GOLD_ORE to 3.0))
+
+        assertNull(service.rewardFor(Material.COAL_ORE))
+        assertEquals(3.0, service.rewardFor(Material.GOLD_ORE))
+    }
 }
